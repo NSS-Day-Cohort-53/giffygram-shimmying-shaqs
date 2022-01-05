@@ -1,5 +1,8 @@
 import { getUsers } from "../data/provider.js"
 
+const applicationElement = document.querySelector(".giffygram")
+
+
 
 document.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "loginButton") {
@@ -19,6 +22,11 @@ document.addEventListener("click", clickEvent => {
             localStorage.setItem("gg_user", foundUser.id)
             document.querySelector(".giffygram").dispatchEvent(new CustomEvent("stateChanged"))
         }
+       
+    }
+    if (clickEvent.target.id ==="logout") {
+        localStorage.setItem("gg_user", null)
+        document.querySelector(".giffygram").dispatchEvent(new CustomEvent("stateChanged"))
     }
 })
 
