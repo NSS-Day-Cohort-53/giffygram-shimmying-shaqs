@@ -56,3 +56,19 @@ export const getLikes = () => {
 export const getMessages = () => {
   return applicationState.messages.map((message) => ({ ...message }));
 };
+
+export const sendUser = (newUser) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newUser),
+  };
+
+  return fetch(`${apiURL}/users`, fetchOptions)
+    .then((response) => response.json())
+    .then(() => {
+      document.dispatchEvent(new CustomEvent("stateChanged"));
+    });
+};
