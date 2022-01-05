@@ -1,4 +1,5 @@
 import { getUsers } from "../data/provider.js"
+import { registrationForm } from "./Register.js"
 
 const applicationElement = document.querySelector(".giffygram")
 
@@ -45,5 +46,6 @@ export const LoginForm = () => {
             </form>
             <button id="loginButton">Login</button>
         </div>
+        ${registrationForm()}
     `
 }
