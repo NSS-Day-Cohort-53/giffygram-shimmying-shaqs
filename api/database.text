@@ -1,21 +1,26 @@
 {
-    "posts": [
-      {
-        "id": 1,
-        "title": "json-server",
-        "author": "typicode"
-      }
-    ],
-      "users": [
-      {
-      "id":1,
-      "name": "typicode",
-      "email":"typicode@aol.com",
-      "password":"password"
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "imageURL":"https://media3.giphy.com/media/6901DbEbbm4o0/giphy.gif?cid=ecf05e471hj6wqvor6xca1w2njs6d3kom3ksi5cpxw5m8ud6&rid=giphy.gif&ct=g",
+      "description":"gif from Braveheart",
+      "author": "typicode"
     }
   ],
-  "likes": [],
-  "messages":[]
-
-
-  }
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "typicode",
+      "email": "typicode@aol.com",
+      "password": "password"
+    }
+  ]
+}
