@@ -1,13 +1,13 @@
+import { addPost} from "./feed/addPost.js"
 import {listPosts} from "./feed/PostList.js"
 import {navBar} from "./nav/navBar.js"
 
 export const GiffyGram = () => {
-
-    // Show main main UI
     return `
     <!-- navBar-->
     ${navBar()}
     
-  <p class="listPost">  ${listPosts()}</p>
-    `
+  <div class="giffygram__newPost">${addPost()}</div>     
+  <div class="giffygram__feed">${listPosts()}</div>
+
 }

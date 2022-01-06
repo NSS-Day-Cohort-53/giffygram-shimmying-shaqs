@@ -1,4 +1,4 @@
-import { getPosts } from "../data/provider.js";
+import { getPosts, getUsers } from "../data/provider.js";
 const applicationElement = document.querySelector(".giffygram")
 
 
@@ -6,7 +6,7 @@ const applicationElement = document.querySelector(".giffygram")
 return `<li>  ${request.title} 
 <img src="${request.imageURL}"></img>
 Description:${request.description}
-by ${request.author}
+by ${displayPostAuthor(request)}
 </li>  `
 
 
@@ -21,4 +21,12 @@ by ${request.author}
             ${listPost.map(converRquestToListElement).join("")}
         `
         return html
+}
+
+
+const displayPostAuthor = (post) => {
+    const posts = getPosts()
+    const users = getUsers()
+    const postUser = users.find((user) => user.id === post.userId )
+    return postUser.name 
 }
