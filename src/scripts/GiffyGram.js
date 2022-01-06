@@ -5,7 +5,7 @@ export const GiffyGram = () => {
 
     // Show main main UI
     return `<h1>Giffygram</h1>
-  <div class="giffygram__addpost">${addPost()}</div>     
+  <div class="giffygram__newPost">${addPost()}</div>     
   <div class="giffygram__feed">${listPosts()}</div>
     
   <button id="logout">Logout</button>`
