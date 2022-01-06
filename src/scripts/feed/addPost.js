@@ -24,6 +24,7 @@ applicationElement.addEventListener("click", (clickEvent) => {
 });
 const addPostForm = () => {
   let html = `
+<div class="newPost__input"> 
     </h2>New GIF Post</h2>
     <div class="field">
             <label class="label" for="postTitle" >Title</label>
@@ -37,7 +38,8 @@ const addPostForm = () => {
             <label class="label" for="postDescription">Tell us about your GIF</label>
             <input type="text" name="postDescription" placeholder="Tell us about your GIF" class="input" />
         </div>
-        <button class="button" id="addNewPost">Add Post</button><button class="button" id="cancelNewPost">Cancel</button> `;
+        <button class="button" id="addNewPost">Add Post</button><button class="button" id="cancelNewPost">Cancel</button>
+</div> `;
   return html;
 };
 
