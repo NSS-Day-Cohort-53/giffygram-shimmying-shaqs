@@ -9,7 +9,7 @@
     z-index: 11;
     top: -20px;
     max-height: 76px;
-    width: 100%;
+    width: fit-content;
     background-color: whitesmoke;
     margin: auto;
 }
