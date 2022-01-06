@@ -8,6 +8,6 @@ export const GiffyGram = () => {
     ${navBar()}
     
   <div class="giffygram__newPost">${addPost()}</div>     
-  <div class="giffygram__feed">${listPosts()}</div>
+  <div class="giffygram__feed">${listPosts()}</div>`
 
 }
