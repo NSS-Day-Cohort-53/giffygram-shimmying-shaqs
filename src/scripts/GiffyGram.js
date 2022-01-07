@@ -10,6 +10,8 @@ export const GiffyGram = () => {
     </nav>
    ${sendNewMessage()}
 
-  <div class="giffygram__newPost">${addPost()}</div>     
-  <div class="giffygram__feed">${listPosts()}</div>`;
+  
+  <div class="giffygram__feed">
+  ${addPost()}
+  ${listPosts()}</div>`;
 };
