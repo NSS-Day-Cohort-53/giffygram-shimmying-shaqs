@@ -1,11 +1,19 @@
-import {listPosts} from "./feed/PostList.js"
-import { Footer } from "./nav/Footer.js"
+import { addPost } from "./feed/addPost.js";
+import { listPosts } from "./feed/PostList.js";
+import { sendNewMessage } from "./message/MessageForm.js";
+import { navBar } from "./nav/navBar.js";
+import { Footer } from "./nav/Footer.js";
 
 export const GiffyGram = (filterObj) => {
+  return `
+    <nav class="navigation">
+    ${navBar()}
+    </nav>
+   ${sendNewMessage()}
 
-    // Show main main UI
-    return `<h1>Giffygram</h1>
-  <p>  ${listPosts(filterObj)}</p>
-    <button id="logout">Logout</button>
-  ${Footer()}`
-}
+  
+  <div class="giffygram__feed">
+  ${addPost()}
+  ${listPosts(filterObj)}</div>
+  ${Footer()}`;
+};

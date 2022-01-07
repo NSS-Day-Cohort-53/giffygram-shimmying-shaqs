@@ -7,16 +7,16 @@ export const registrationForm = () => {
     let html = `
    </h2>Register New User</h2>
     <div class="field">
-            <label class="label" for="userName">Name</label>
-            <input type="text" name="userName" class="input" />
+            <label class="label" for="userName" >Name</label>
+            <input type="text" name="userName" placeholder="Name" class="input" />
         </div> 
         <div class="field">
-            <label class="label" for="userEmail">Email</label>
-            <input type="text" name="userEmail" class="input" />
+            <label class="label" for="userEmail" >Email</label>
+            <input type="text" name="userEmail" placeholder="Email" class="input" />
         </div> 
         <div class="field">
             <label class="label" for="userPassword">Password</label>
-            <input type="password" name="userPassword" class="input" />
+            <input type="password" name="userPassword" placeholder="Password" class="input" />
         </div>
         <button class="button" id="registerNewUser">Register</button> `
         return html
