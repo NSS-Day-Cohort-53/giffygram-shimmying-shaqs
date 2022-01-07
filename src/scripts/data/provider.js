@@ -87,3 +87,18 @@ export const sendNewPost = (newPost) => {
       document.dispatchEvent(new CustomEvent("stateChanged"));
     });
 };
+export const uploadNewMessage = (newMessage) => {
+  const fetchOptions = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newMessage),
+  };
+
+  return fetch(`${apiURL}/messages`, fetchOptions)
+    .then((response) => response.json())
+    .then(() => {
+      document.dispatchEvent(new CustomEvent("stateChanged"));
+    });
+};
