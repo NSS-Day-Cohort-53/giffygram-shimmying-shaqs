@@ -5,10 +5,10 @@ import { navBar } from "./nav/navBar.js";
 
 export const GiffyGram = () => {
   return `
-    <!-- navBar-->
+    <nav class="navigation">
     ${navBar()}
-   
-    ${sendNewMessage()}
+    </nav>
+   ${sendNewMessage()}
 
   <div class="giffygram__newPost">${addPost()}</div>     
   <div class="giffygram__feed">${listPosts()}</div>`;
