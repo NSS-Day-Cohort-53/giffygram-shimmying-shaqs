@@ -24,7 +24,7 @@ applicationElement.addEventListener("click", (clickEvent) => {
 });
 const addPostForm = () => {
   let html = `
-<div class="newPost__input"> 
+<div class="newPost"> 
     </h2>New GIF Post</h2>
     <div class="field">
             <label class="label" for="postTitle" >Title</label>
