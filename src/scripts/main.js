@@ -8,7 +8,9 @@ const applicationElement = document.querySelector(".giffygram")
 applicationElement.addEventListener("stateChanged", (customEvent) => {
     renderApp();
   });
-
+document.addEventListener("filter", (event) => {
+    applicationElement.innerHTML = GiffyGram(event.detail)
+})
   
 export const renderApp = () => {
     fetchUsers()

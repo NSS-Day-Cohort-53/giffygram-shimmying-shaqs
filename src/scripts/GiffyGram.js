@@ -2,8 +2,9 @@ import { addPost } from "./feed/addPost.js";
 import { listPosts } from "./feed/PostList.js";
 import { sendNewMessage } from "./message/MessageForm.js";
 import { navBar } from "./nav/navBar.js";
+import { Footer } from "./nav/Footer.js";
 
-export const GiffyGram = () => {
+export const GiffyGram = (filterObj) => {
   return `
     <nav class="navigation">
     ${navBar()}
@@ -13,5 +14,6 @@ export const GiffyGram = () => {
   
   <div class="giffygram__feed">
   ${addPost()}
-  ${listPosts()}</div>`;
+  ${listPosts(filterObj)}</div>
+  ${Footer()}`;
 };
