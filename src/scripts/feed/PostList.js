@@ -3,11 +3,15 @@ const applicationElement = document.querySelector(".giffygram")
 
 
     const converRquestToListElement=(request)=>{
-return `<li>  ${request.title} 
-<img src="${request.imageURL}"></img>
-Description:${request.description}
-by ${displayPostAuthor(request)}
-</li>  `
+return `<section class="post">  
+<header>
+<h2 class="post__title">${request.title}</h2> 
+<img class="post__image" src="${request.imageURL}"></img>
+<div class="post__description">${request.description}</div>
+<div class="post__tagline">
+Posted by: ${displayPostAuthor(request)}
+</div>
+</section>  `
 
 
     }
