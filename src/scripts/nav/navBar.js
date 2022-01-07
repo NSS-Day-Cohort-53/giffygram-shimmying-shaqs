@@ -6,7 +6,7 @@ export const navBar=()=>{
   
         <p class="navigation__name">Giffygram</p>
        
-        <img class="navigation_pen" src="./images/fountain-pen.svg"></img>
+        <img class="navigation_pen" id="startNewMessage" src="./images/fountain-pen.svg"></img>
         <p class="notification__count" >0</p>
         <a id="logout" class="navigation__logout">Logout</a>
 
