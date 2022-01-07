@@ -7,7 +7,7 @@ export const sendNewMessage = () => {
 };
 
 applicationElement.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "startNewMessage") {
+    if (clickEvent.target.id === "directMessageIcon") {
       newMessageDisplay = newMessageForm();
     document
       .querySelector(".giffygram")
@@ -16,7 +16,7 @@ applicationElement.addEventListener("click", (clickEvent) => {
   });
   
   applicationElement.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "cancelNewMessage") {
+    if (clickEvent.target.id === "directMessage__cancel") {
       newMessageDisplay = "";
       document
         .querySelector(".giffygram")
@@ -27,7 +27,7 @@ applicationElement.addEventListener("click", (clickEvent) => {
 const newMessageForm = () => {
   const users = getUsers();
   let html = `
-    <section class="directMessage">
+    <div class="directMessage">
         <h2>Direct Message</h2>
             <h3>Choose Recipient</h3>
                 <select class="message__input" id="select--friends" label="Select Recipient">
@@ -35,17 +35,17 @@ const newMessageForm = () => {
                 ${users
                   .map((user) => {
                     return `<option value="${user.id}">${user.name}</option>`;
-                  })
-                  .join("")}        
+                  }).join("")}       
                 </select>
-            <h3>Message</h3
+            <h3>Message</h3>
                 <div class="field">
-                <input type="text" name="newMessage" placeholder="Write message here" class="input" />
+                <input type="text" name="newMessage" placeholder="Write message here" class="message__input" />
                 </div>    
-                <div>
-                <button class="message_button" id="submitNewMessage">Send Message</button><button class="message_button" id="cancelNewMessage">Cancel</button>
+                
+                <button class="message_button" id="directMessage__submit">Send Message</button>
+                <button class="message_button" id="directMessage__cancel">Cancel</button>
                 </div>
-                </section>`;
+    `;
   return html;
 };
 
@@ -54,7 +54,7 @@ let newMessageDisplay = "";
 
 
 applicationElement.addEventListener("click", (clickEvent) => {
-    if (clickEvent.target.id === "submitNewMessage") {
+    if (clickEvent.target.id === "directMessage__submit") {
       const messageUserId = localStorage.getItem("gg_user");
       const messageRecipientId = document.getElementById("select--friends").value;
       const messageText = document.querySelector("input[name='newMessage']").value;

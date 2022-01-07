@@ -1,15 +1,17 @@
-export const navBar=()=>{
-
-    return `
-    <div class="navigation">
+export const navBar = () => {
+  return `
+    <div class="navigation__item navigation__icon">
     <img class="navigation__icon" src="./images/pb.png"></img>
-  
-        <p class="navigation__name">Giffygram</p>
-       
-        <img class="navigation_pen" id="startNewMessage" src="./images/fountain-pen.svg"></img>
-        <p class="notification__count" >0</p>
-        <a id="logout" class="navigation__logout">Logout</a>
-
     </div>
-    `
-}
+    <div class="navigation__item navigation__name">Giffygram</div>
+    <div class="navigation__item navigation__search"></div>
+    <div class="navigation__item navigation__message">
+                <img id="directMessageIcon" src="./images/fountain-pen.svg" alt="Direct message">
+                <div class="notification__count">
+                    0
+                </div>
+            </div>   
+            <div class="navigation__item navigation__logout">
+            <button id="logout" class="fakeLink">Logout</button>
+        </div>`;
+};
